@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.board{
+  height: 15vw;
+  width: 70%;
+  background-color: #759ef4;
+  position: absolute;
+  left: 5vw;
+  top: 10vw;
+}
+
 .jp_map{
   width: auto;
   max-height: 100px;

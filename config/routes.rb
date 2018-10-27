@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'users/index'
+
   resources :maps
 
   get '/login',to: 'sessions#new'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
   delete '/logout',to: 'sessons#destroy'
 
   
-
+resources :users
   namespace :admin do
     resources :users
   end
