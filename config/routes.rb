@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   delete '/logout',to: 'sessons#destroy'
 
   
-
+resources :users
   namespace :admin do
     resources :users
   end
+
+  resources :votes
 
   root to: 'blogs#index'
   resources :blogs
