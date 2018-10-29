@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'users/index'
-
   resources :maps
 
   get '/login',to: 'sessions#new'
@@ -13,6 +11,8 @@ resources :users
   namespace :admin do
     resources :users
   end
+
+  resources :votes
 
   root to: 'blogs#index'
   resources :blogs
