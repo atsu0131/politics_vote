@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+  root to: 'toppages#index'
+
   resources :maps
 
   get '/login',to: 'sessions#new'
