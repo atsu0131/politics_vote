@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   
   def index
     @blogs = Blog.all
+    @user = current_user
   end
 
   def new
@@ -13,8 +14,13 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.create(blog_parameter)
-    redirect_to blogs_path
+    @blog = Blog.new(blog_parameter)
+    @blog.user_id = current_user.id
+    if @blog.save
+      redirect_to blogs_path
+    else
+      rendar :new
+    end
   end
 
   def destroy
