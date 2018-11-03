@@ -1,1 +1,11 @@
-<%= @map.pref_name %>
+<div class="pref_name">
+  <div class="pref_name_write">
+  <%= @map.pref_name %>
+  </div>
+</div>
+
+<div class="container">
+  <% @users.each do |user| %>
+    <div class="item"><%= user.name %></div>
+  <% end %>
+</div>

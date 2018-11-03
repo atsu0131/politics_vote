@@ -9,10 +9,24 @@ class MapsController < ApplicationController
 
   def show
     @map = Map.find(params[:id])
+    @users = User.all
   end
 
   def edit
+    @map = Map.find(params[:id])
   end
+
+  def update
+    @map = Mam.find(params[:id])
+    map.Update
+    if @map.save
+      redirect_to maps_path
+    else
+      rendar :new
+    end
+  end
+
+
 
 
 end
