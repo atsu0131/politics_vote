@@ -16,19 +16,26 @@
 <div class="header">
   <div class="container">
       <div class="row_front">
+            <span class="col-xs-2 col-xs-12">
+              <%= link_to "toppage", root_path,class:"front" %>
+            </span>
             <% if current_user %>
-            <span class="col-xs-2">
+            <span class="col-xs-2 col-xs-12">
               <%= link_to "Profile", admin_user_path(current_user.id),class:"front" %>
             </span>
-            <span class="col-xs-2">
+            <span class="col-xs-2 col-xs-12">
               <%= link_to "Logout", logout_path(current_user.id), method: :delete,class:"front" %>
             </span>
-              <span class="col-xs-2">
-                <%= link_to 'ユーザー一覧', users_path,class:"front" %>
+              <span class="col-xs-2 col-xs-12">
+                <%= link_to 'user', users_path,class:"front" %>
               </span>
             <% else %>
+            <span class="col-xs-2 col-xs-12">
               <%= link_to "Sign up", new_admin_user_path,class:"front" %>
+            </span>
+            <span class="col-xs-2 col-xs-12">
               <%= link_to "Login", login_path,class:"front" %>
+            </span>
               <% end %>
       </div>
   </div>
