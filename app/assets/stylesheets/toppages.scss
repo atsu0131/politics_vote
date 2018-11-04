@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.header{
+  height: 50px;
+  width: 100%;
+  background-color: green;
+}
+
+.front{
+  font-size: 120%;
+  margin-left: 10%;
+  color: #fff;
+
+}
+
+.row_front{
+  height: 50px;
+  width:100%;
+  margin-top:15px;
+}
+
+.table{
+  height: 50px;
+  width: 100px;
+}
+
 /* ------------------------------------- /
 /   Header
 /* ------------------------------------- */

@@ -13,14 +13,26 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
 
-    <% if current_user %>
-      <%= link_to "Profile", admin_user_path(current_user.id) %>
-      <%= link_to "Logout", logout_path(current_user.id), method: :delete %>
-      <%= link_to 'ユーザー一覧', users_path %>
-    <% else %>
-      <%= link_to "Sign up", new_admin_user_path %>
-      <%= link_to "Login", login_path %>
-    <% end %>
+<div class="header">
+  <div class="container">
+      <div class="row_front">
+            <% if current_user %>
+            <span class="col-xs-2">
+              <%= link_to "Profile", admin_user_path(current_user.id),class:"front" %>
+            </span>
+            <span class="col-xs-2">
+              <%= link_to "Logout", logout_path(current_user.id), method: :delete,class:"front" %>
+            </span>
+              <span class="col-xs-2">
+                <%= link_to 'ユーザー一覧', users_path,class:"front" %>
+              </span>
+            <% else %>
+              <%= link_to "Sign up", new_admin_user_path,class:"front" %>
+              <%= link_to "Login", login_path,class:"front" %>
+              <% end %>
+      </div>
+  </div>
+</div>
 
     <%= yield %>
   </body>
