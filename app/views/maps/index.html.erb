@@ -3,15 +3,15 @@
 <div class="board">
 
 </div>
-
-<ul class="jp_map">
-  <% @maps.each do |map| %>
-      <li>
-        <%= link_to map.pref_name, map_path(map.id) %>
-      </li>
-  <% end %>
-
-    </ul>
+<div style="width: 65%;,height:20%;">
+  <ul class="jp_map">
+    <% @maps.each do |map| %>
+        <li>
+          <%= link_to map.pref_name, map_path(map.id) %>
+        </li>
+    <% end %>
+  </ul>
+</div>
 
 
 <script>

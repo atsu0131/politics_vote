@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.test-color1{
+  background-color: red;
+  width: 100vw;
+  height: 20vw;
+}
+
+.test-color2{
+  background-color: green;
+  width: 100vw;
+  height: 20vw;
+}
+
+.test-color3{
+  background-color:blue;
+  width: 100vw;
+  height: 20vw;
+}
+
 .header{
   height: 50px;
   width: 100%;

@@ -1,6 +1,8 @@
-  <h2>ユーザー</h2>
+  <h2>投票</h2>
+
+<div class="container">
   <% @users.each do |user| %>
-    <%= user.name %>
-    <%= user.email %>
-    <%= render 'follow_form', user: user %>
+    <div class="item"><%= user.name %>
+      <%= render 'follow_form', user: user %>
+    </div>
   <% end %>
