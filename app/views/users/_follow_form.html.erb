@@ -2,11 +2,11 @@
   <% unless current_user.following?(user) %>
     <%= form_with(model: current_user.active_votes.build(followed_id: user.id)) do |f| %>
       <%= f.hidden_field :followed_id %>
-      <%= f.submit "フォロー" %>
+      <%= f.submit "投票" %>
     <% end %>
   <% else %>
     <%= form_with(model: current_user.active_votes.find_by(followed_id: user.id), method: :delete ) do |f| %>
-      <%= f.submit "つながりを解除" %>
+      <%= f.submit "投票を取りやめる" %>
     <% end %>
   <% end %>
 </div>

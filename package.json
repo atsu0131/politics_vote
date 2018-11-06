@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3",
+    "chart.js": "^2.7.3",
     "jquery": "^3.3.1"
   }
 }
