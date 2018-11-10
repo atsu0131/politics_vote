@@ -2,11 +2,13 @@
   <% unless current_user.following?(user) %>
     <%= form_with(model: current_user.active_votes.build(followed_id: user.id)) do |f| %>
       <%= f.hidden_field :followed_id %>
-      <%= f.submit "投票" %>
+      <div class= photo></div>
+      <%= f.submit "投票", class:"btn btn-info"%>
     <% end %>
   <% else %>
     <%= form_with(model: current_user.active_votes.find_by(followed_id: user.id), method: :delete ) do |f| %>
-      <%= f.submit "投票を取りやめる" %>
+    <div class= photo></div>
+      <%= f.submit "投票を取りやめる",class:"btn btn-danger" %>
     <% end %>
   <% end %>
 </div>

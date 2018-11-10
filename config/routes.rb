@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
 
 
-  resources :maps
+  resources :maps do
+    resources :prefs
+  end
 
   get '/login',to: 'sessions#new'
   post'/login',to:'sessions#create'
