@@ -37,12 +37,14 @@
                         <li><%= link_to '議員検索',maps_path %></li>
                     </li>
                     <li>
-                        <a href="#">MENU</a>
-                    </li>
-                    <li>
-                        <a href="#">MENU</a>
+
                     </li>
                 </ul>
+                      <%= search_form_for @q do |f| %>
+                      <%= f.label :name, "名前" %>
+                      <%= f.search_field :name %>
+                      <div class="actions"><%= f.submit "検索" %></div>
+                      <% end %>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -76,6 +78,8 @@ var mySwiper = new Swiper ('.swiper-container', {
   prevButton: '.swiper-button-prev',
 })
 </script>
+
+
 
 
 
