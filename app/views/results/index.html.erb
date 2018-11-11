@@ -5,6 +5,11 @@
 <div style="width: 50%;">
 <canvas id="myChart"></canvas>
 </div>
+<% @users.each do |user|%>
+  <%= user.name %>
+  <%= user.followers.count %>
+<% end %>
+
 
 <script>
 var ctx = document.getElementById("myChart");
