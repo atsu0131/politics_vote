@@ -17,7 +17,7 @@ class MapsController < ApplicationController
   end
 
   def update
-    @map = Mam.find(params[:id])
+    @map = Map.find(params[:id])
     map.Update
     if @map.save
       redirect_to maps_path
