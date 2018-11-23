@@ -24,7 +24,7 @@
               <%= link_to "Profile", user_path(current_user.id),class:"front" %>
             </span>
             <span class="col-xs-2 col-xs-12">
-              <%= link_to "Logout", logout_path(current_user.id), method: :delete,class:"front" %>
+              <%= link_to "Logout", logout_path, method: :delete,class:"front" %>
             </span>
               <span class="col-xs-2 col-xs-12">
                 <%= link_to 'user', users_path,class:"front" %>
